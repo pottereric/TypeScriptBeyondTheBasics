@@ -1,0 +1,18 @@
+{
+  "name": "tsunittestsetupwithinstructioningitlog",
+  "version": "0.1.0",
+  "description": "example",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Eric Potter",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "@types/node": "^11.13.9",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
