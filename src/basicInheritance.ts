@@ -13,9 +13,9 @@ export class Programmer extends Person {
         super(firstName, lastName);
     }
 
-    
     public GetGreeting() : string{
-        //return `Hello, my name is ${this.firstName} ${this.lastName}. My favorite language is ${this.favoriteLanuage}.`;
         return `${super.GetGreeting()} My favorite language is ${this.favoriteLanuage}.`;
     }
 }
+
+
