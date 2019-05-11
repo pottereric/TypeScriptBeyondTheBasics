@@ -13,7 +13,7 @@ export class Programmer extends Person {
         super(firstName, lastName);
     }
 
-    public GetGreeting() : string{
+    public GetGreeting() : string {
         return `${super.GetGreeting()} My favorite language is ${this.favoriteLanuage}.`;
     }
 }
