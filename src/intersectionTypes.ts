@@ -1,10 +1,9 @@
 export function extend<First, Second>(first: First, second: Second): First & Second {
     const result: Partial<First & Second> = {};
     for (const prop in first) {
-        if (first.hasOwnProperty(prop)) {
-            (<First>result)[prop] = first[prop];
-        }
+        (<First>result)[prop] = first[prop];
     }
+
     for (const prop in second) {
         if (second.hasOwnProperty(prop)) {
             (<Second>result)[prop] = second[prop];
@@ -15,7 +14,7 @@ export function extend<First, Second>(first: First, second: Second): First & Sec
 
 
 
-export class Programmer {
+export class ProgrammerEmployee {
     constructor(public firstName: string, public lastName: string, public favoriteLanuage: string){
     }
 

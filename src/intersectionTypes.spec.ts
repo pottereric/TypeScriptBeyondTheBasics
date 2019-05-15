@@ -1,7 +1,7 @@
-import {extend, Programmer, BillableResource } from './intersectionTypes'
+import {extend, ProgrammerEmployee, BillableResource } from './intersectionTypes'
 
 test('Can create Programmer', () => {
-    let p = new Programmer('Don', 'Syme', "F#");
+    let p = new ProgrammerEmployee('Don', 'Syme', "F#");
     expect(p.GetGreeting()).not.toBeNull();
 })
 
@@ -11,15 +11,16 @@ test('can create billable resource', () => {
 })
 
 test('Can create intersection type', () => {
-    const don = extend(new Programmer('Don', 'Syme', 'F#'), BillableResource.prototype);
-    expect(don.GetGreeting()).not.toBeNull();
+    const don = extend(new ProgrammerEmployee('Don', 'Syme', 'F#'), BillableResource.prototype);
     expect(don.GetInvoiceAmount(10, 8)).toBe(80);
+    let greeting = don.GetGreeting();
+    expect(greeting).not.toBeNull();
 })
     
 test('Can create intersection type', () => {
-    const don = extend(new Programmer('Don', 'Syme', 'F#'), BillableResource.prototype);
+    const don = extend(new  ProgrammerEmployee('Don', 'Syme', 'F#'), BillableResource.prototype);
 
-    let prog : Programmer = don;
+    let prog : ProgrammerEmployee = don;
     expect(prog.GetGreeting()).not.toBeNull();
     //expect(prog.GetInvoiceAmount(10, 8)).toBe(80);
 
@@ -30,6 +31,4 @@ test('Can create intersection type', () => {
 })
 
     
-
-
 
