@@ -9,5 +9,11 @@ enum myGrade {
     A, B, C, D
 }
 
+// Template Literal Types
+type GradeModifiers = "+" | "" | "-"
+type expandedGrades = `${Grade}${GradeModifiers}`
 
-
+export function EnterExpandedGrade(studentName : string, grade : expandedGrades)
+{
+    // TODO - store grade for student
+}

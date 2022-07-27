@@ -1,4 +1,4 @@
-import { EnterGrade } from "./stringLiterals"
+import { EnterExpandedGrade, EnterGrade } from "./stringLiterals"
 
 test("Can assign grade", () => {
     EnterGrade("Eric Potter", "B");
@@ -10,3 +10,6 @@ test("Cannot assign invalid grade", () => {
 })
 
 
+test("Can assign expanded grade", () => {
+    EnterExpandedGrade("Eric Potter", "B+");
+})
